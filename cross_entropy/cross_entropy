@@ -1,0 +1,8 @@
+import numpy as np
+
+def cross_entropy(Y, P):
+    result = 0
+    for i in range(len(Y)):
+        cse = (Y[i]*np.log(P[i]))+ (1-Y[i])* np.log(1-P[i])
+        result += cse
+    return -result
